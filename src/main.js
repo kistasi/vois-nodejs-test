@@ -1,10 +1,16 @@
 const express = require('express');
+const path = require('path');
+const apiRouter = require('./routers/api');
 
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello World!' });
+app.use(express.static(path.join(__dirname, 'frontend')));
+
+app.use('/api', apiRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 app.listen(port, () => {
