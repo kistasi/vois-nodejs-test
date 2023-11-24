@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/kistasi/vois-nodejs-test/issues"
   },
-  "homepage": "https://github.com/kistasi/vois-nodejs-test#readme"
+  "homepage": "https://github.com/kistasi/vois-nodejs-test#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
