@@ -1,0 +1,54 @@
+_type: export
+__export_format: 4
+__export_date: 2023-11-24T19:28:59.769Z
+__export_source: insomnia.desktop.app:v8.4.5
+resources:
+  - _id: req_0e98ba270ce04ddc8902c241f23ca8bd
+    parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    modified: 1700854060731
+    created: 1700853990464
+    url: http://localhost:3000
+    name: Hello world
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.5
+    authentication: {}
+    metaSortKey: -1700853990464
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    parentId: null
+    modified: 1700853958998
+    created: 1700853958998
+    name: VOIS test
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: env_574687871954a1471c6d7784f477714314278920
+    parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    modified: 1700853959001
+    created: 1700853959001
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1700853959001
+    _type: environment
+  - _id: jar_574687871954a1471c6d7784f477714314278920
+    parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    modified: 1700853959002
+    created: 1700853959002
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
