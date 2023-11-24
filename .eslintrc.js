@@ -5,6 +5,7 @@ module.exports = {
     node: true,
   },
   extends: 'airbnb-base',
+  ignorePatterns: ['src/public/**/*'],
   overrides: [
     {
       env: {
