@@ -3,9 +3,13 @@ const { getComments } = require('../../helpers/comments');
 function GetCommentsEndpoint(req, res) {
   const postId = Number(req.params.id);
   const comments = getComments();
-  const postComments = comments.filter((item) => item.post_id === postId);
+  const list = comments.filter((item) => item.post_id === postId);
 
-  res.json({ data: postComments });
+  if (list.length === 0) {
+    res.status(400);
+  } else {
+    res.json({ data: list });
+  }
 }
 
 module.exports = GetCommentsEndpoint;
