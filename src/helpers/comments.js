@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs');
 
 function getComments() {
-  const postsPath = path.join(__dirname, '..', 'data', 'comments.json');
-  const fileContent = fs.readFileSync(postsPath, 'utf8');
+  const filePath = path.join(__dirname, '..', '..', 'data', 'comments.json');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
   return JSON.parse(fileContent);
 }
 
