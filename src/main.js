@@ -1,9 +1,12 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const apiRouter = require('./routers/api');
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'frontend')));
 
