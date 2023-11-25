@@ -1,14 +1,14 @@
 _type: export
 __export_format: 4
-__export_date: 2023-11-24T19:28:59.769Z
+__export_date: 2023-11-25T13:55:05.415Z
 __export_source: insomnia.desktop.app:v8.4.5
 resources:
   - _id: req_0e98ba270ce04ddc8902c241f23ca8bd
     parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
-    modified: 1700854060731
+    modified: 1700920377650
     created: 1700853990464
-    url: http://localhost:3000
-    name: Hello world
+    url: "{{ _.hostname }}/api/posts"
+    name: Posts list
     description: ""
     method: GET
     body: {}
@@ -34,13 +34,85 @@ resources:
     description: ""
     scope: collection
     _type: workspace
+  - _id: req_8506a856231142d89852602c0bdd2bb7
+    parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    modified: 1700920408436
+    created: 1700920384298
+    url: "{{ _.hostname }}/api/posts/1"
+    name: Single post
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.5
+    authentication: {}
+    metaSortKey: -1700853990364
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1357f72fa13646c4a0ef5fa75a961039
+    parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    modified: 1700920437262
+    created: 1700920411086
+    url: "{{ _.hostname }}/api/posts/1/comments"
+    name: Comments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.5
+    authentication: {}
+    metaSortKey: -1700853990264
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_77933eadac264793a457e60dc484d2cc
+    parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
+    modified: 1700920470095
+    created: 1700920448079
+    url: "{{ _.hostname }}/api/tags/Sports"
+    name: Tags
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.5
+    authentication: {}
+    metaSortKey: -1700853990164
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: env_574687871954a1471c6d7784f477714314278920
     parentId: wrk_1c5e0afa3aa0447b8eb8646c5b08538f
-    modified: 1700853959001
+    modified: 1700920353919
     created: 1700853959001
     name: Base Environment
-    data: {}
-    dataPropertyOrder: null
+    data:
+      hostname: http://localhost:3000
+    dataPropertyOrder:
+      "&":
+        - hostname
     color: null
     isPrivate: false
     metaSortKey: 1700853959001
