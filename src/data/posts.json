@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "This is the title of the first post",
+    "headline": "This is the headline of the first post",
+    "body": "This is the body of the first post",
+    "created_at": "2023-11-25",
+    "tags": ["Sports"]
+  },
+  {
+    "id": 2,
+    "title": "This is the title of the second post",
+    "headline": "This is the headline of the second post",
+    "body": "This is the body of the second post",
+    "created_at": "2022-11-25",
+    "tags": ["IT"]
+  },
+  {
+    "id": 2,
+    "title": "This is the title of the third post",
+    "headline": "This is the headline of the third post",
+    "body": "This is the body of the third post",
+    "created_at": "2021-11-25",
+    "tags": ["Magic"]
+  }
+]

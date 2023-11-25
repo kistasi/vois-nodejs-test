@@ -1,8 +1,10 @@
 const express = require('express');
-const ExampleEndpoint = require('../endpoints/api/example');
+const PostsGetEndpoint = require('../endpoints/api/posts.get');
+const GetPostsSingleEndpoint = require('../endpoints/api/posts-single.get');
 
 const router = express.Router();
 
-router.get('/example', ExampleEndpoint);
+router.get('/posts', PostsGetEndpoint);
+router.get('/posts/:id', GetPostsSingleEndpoint);
 
 module.exports = router;
