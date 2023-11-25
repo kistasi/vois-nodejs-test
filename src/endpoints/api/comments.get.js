@@ -6,9 +6,16 @@ function GetCommentsEndpoint(req, res) {
   const list = comments.filter((item) => item.post_id === postId);
 
   if (list.length === 0) {
-    res.status(400);
+    res
+      .status(400)
+      .json({
+        error: 'Comments not found',
+      });
   } else {
-    res.json({ data: list });
+    res
+      .json({
+        data: list,
+      });
   }
 }
 

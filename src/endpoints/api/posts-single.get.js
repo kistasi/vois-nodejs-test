@@ -5,9 +5,15 @@ function GetPostsSingleEndpoint(req, res) {
   const post = posts.find((item) => item.id === Number(req.params.id));
 
   if (!post) {
-    res.status(400);
+    res
+      .status(400)
+      .json({
+        error: 'Post not found',
+      });
   } else {
-    res.json({ data: post });
+    res.json({
+      data: post,
+    });
   }
 }
 

@@ -6,9 +6,15 @@ function GetTagsEndpoint(req, res) {
   const list = posts.filter((item) => item.tags.includes(tagName));
 
   if (list.length === 0) {
-    res.status(400);
+    res
+      .status(400)
+      .json({
+        error: 'Posts not found',
+      });
   } else {
-    res.json({ data: list });
+    res.json({
+      data: list,
+    });
   }
 }
 
