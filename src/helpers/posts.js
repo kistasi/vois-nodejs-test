@@ -1,10 +1,7 @@
-const path = require('path');
-const fs = require('fs');
+const { getJsonFileContent } = require('.');
 
 function getPosts() {
-  const filePath = path.join(__dirname, '..', '..', 'data', 'posts.json');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContent);
+  return getJsonFileContent('posts.json');
 }
 
 module.exports = {

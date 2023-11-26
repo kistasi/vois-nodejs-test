@@ -1,10 +1,7 @@
-const path = require('path');
-const fs = require('fs');
+const { getJsonFileContent } = require('.');
 
 function getComments() {
-  const filePath = path.join(__dirname, '..', '..', 'data', 'comments.json');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContent);
+  return getJsonFileContent('comments.json');
 }
 
 module.exports = {
