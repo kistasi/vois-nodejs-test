@@ -1,6 +1,6 @@
 const { getPosts } = require('../../helpers/posts');
 
-function GetTagsEndpoint(req, res) {
+function TagsEndopoint(req, res) {
   const tagName = req.params.name;
   const posts = getPosts();
   const list = posts.filter((item) => item.tags.includes(tagName));
@@ -18,4 +18,4 @@ function GetTagsEndpoint(req, res) {
   }
 }
 
-module.exports = GetTagsEndpoint;
+module.exports = TagsEndopoint;

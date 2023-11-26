@@ -1,6 +1,6 @@
 const { getPosts } = require('../../helpers/posts');
 
-function GetPostsSingleEndpoint(req, res) {
+function PostSingleEndpoint(req, res) {
   const posts = getPosts();
   const post = posts.find((item) => item.id === Number(req.params.id));
 
@@ -17,4 +17,4 @@ function GetPostsSingleEndpoint(req, res) {
   }
 }
 
-module.exports = GetPostsSingleEndpoint;
+module.exports = PostSingleEndpoint;

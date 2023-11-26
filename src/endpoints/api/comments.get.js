@@ -1,6 +1,6 @@
 const { getComments } = require('../../helpers/comments');
 
-function GetCommentsEndpoint(req, res) {
+function CommentsEndpoint(req, res) {
   const postId = Number(req.params.id);
   const comments = getComments();
   const list = comments.filter((item) => item.post_id === postId);
@@ -19,4 +19,4 @@ function GetCommentsEndpoint(req, res) {
   }
 }
 
-module.exports = GetCommentsEndpoint;
+module.exports = CommentsEndpoint;
